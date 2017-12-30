@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/biology/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/linux/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/linux/virtualbox_network/</loc>
+    <lastmod>2017-12-29T11:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/linux/git_learning/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/linux/git_usage/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/linux/ssh_connect_to_virtualbox/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/linux/ssh_connection_closed_by_remote/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/linux/git_submodule/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/license/</loc>
+    <lastmod>2017-12-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2015-01-30-using-ensembl-genomes-perl-api/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-10-14-things-to-do-after-install-ubuntu-1404/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2015-03-26-small-rnas-in-bacteria/</loc>
+    <lastmod>2017-03-26T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2015-03-20-ggplot2parallel/</loc>
+    <lastmod>2017-03-20T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2015-04-13-manage-this-blog/</loc>
+    <lastmod>2015-04-13T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2015-04-11-ssh-login-without-password/</loc>
+    <lastmod>2015-04-11T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2015-03-29-toehold-switches/</loc>
+    <lastmod>2015-03-29T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2015-01-23-hypergeometric-analysis--enrichment-analysis/</loc>
+    <lastmod>2015-01-23T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-11-14-install-rna-seq-analysis-tools/</loc>
+    <lastmod>2014-11-14T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-10-31-edit-linux-path/</loc>
+    <lastmod>2014-10-31T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-10-29-rnaseq-analysis-using-r-and-bioconductor/</loc>
+    <lastmod>2014-10-29T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-10-19-github-markdown-syntax/</loc>
+    <lastmod>2014-10-19T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-10-19-add-search-box-to-blog/</loc>
+    <lastmod>2014-10-19T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-10-08-open-source-mirrors-in-china/</loc>
+    <lastmod>2014-10-08T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-10-04-download-files-with-python/</loc>
+    <lastmod>2014-10-04T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-10-04-download-files-with-r/</loc>
+    <lastmod>2014-10-04T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-09-28-transform-genbank-to-fasta-using-biopython/</loc>
+    <lastmod>2014-09-28T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-09-23-mobaxterm-permissions-0660-for-id_rsa-are-too-open/</loc>
+    <lastmod>2014-09-23T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-09-22-configuration-git-ssh/</loc>
+    <lastmod>2014-09-22T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-09-21-manage-multiple-account-on-github/</loc>
+    <lastmod>2014-09-21T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-09-20-jekyll&#43;github/</loc>
+    <lastmod>2014-09-20T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-09-20-manage-github-pages/</loc>
+    <lastmod>2014-09-20T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-09-19-manage-blog-on-github/</loc>
+    <lastmod>2014-09-19T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-09-10-r-read-compressed-files/</loc>
+    <lastmod>2014-09-10T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webpage_001/2014-08-27-questions-about-using-rcurl/</loc>
+    <lastmod>2014-08-27T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/_footer/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/_header/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/api/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/bacteria/</loc>
+    <lastmod>2017-03-26T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/bashrc/</loc>
+    <lastmod>2014-10-31T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/bioinfomatics/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/biopython/</loc>
+    <lastmod>2014-09-28T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ensembl/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/eob/</loc>
+    <lastmod>2017-03-26T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/failed/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ggplot2/</loc>
+    <lastmod>2017-03-20T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/git/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/github/</loc>
+    <lastmod>2014-10-19T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/go/</loc>
+    <lastmod>2015-01-23T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/jekyll/</loc>
+    <lastmod>2014-10-19T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/kegg/</loc>
+    <lastmod>2015-01-23T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/license/</loc>
+    <lastmod>2017-12-24T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mirrors/</loc>
+    <lastmod>2014-10-08T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mobaxterm/</loc>
+    <lastmod>2014-09-23T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/network/</loc>
+    <lastmod>2017-12-29T11:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/python/</loc>
+    <lastmod>2014-10-04T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/qa/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2017-03-20T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/rcurl/</loc>
+    <lastmod>2014-08-27T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/remote/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/rnaseq/</loc>
+    <lastmod>2014-11-14T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/small-rnas/</loc>
+    <lastmod>2015-03-29T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ssh/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ubuntu/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/virtualbox/</loc>
+    <lastmod>2017-12-29T11:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

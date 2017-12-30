@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bio M</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.31.1" />
+
+<title>Using Ensembl Genomes Perl API :: Bio M</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/hybrid.css" rel="stylesheet">
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<link href="/css/auto-complete.css" rel="stylesheet">
+<link href="/theme-original/style.css" rel="stylesheet">
+
+  <link href="/theme-original/variant-blue.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+<meta name="description" content="">
+
+
+    
+  </head>
+  <body data-url="/webpage_001/2015-01-30-using-ensembl-genomes-perl-api/">
+    
+      <div id="headermain"></div>
+<nav id="sidebar" class="showVisitedLinks">
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	
+  
+    <p><strong>Bio M</strong></p>
+
+  
+
+    </div>
+        <div class="searchbox">
+		    <label for="search-by"><i class="fa fa-search"></i></label>
+		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <span data-search-clear=""><i class="fa fa-close"></i></span>
+		</div>
+		<script type="text/javascript" src="/js/lunr.min.js"></script>
+		<script type="text/javascript" src="/js/auto-complete.js"></script>
+		<script type="text/javascript">
+        
+            var baseurl = "\/";
+        
+		</script>
+		<script type="text/javascript" src="/js/search.js"></script>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="/biology/" class="dd-item">
+      <a href="/biology/">
+        <span>Biology</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/linux/" class="dd-item">
+      <a href="/linux/">
+        <span>Linux</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/linux/virtualbox_network/" class="dd-item">
+        <a href="/linux/virtualbox_network/">
+          <span>VirtualBox network</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/git_learning/" class="dd-item">
+        <a href="/linux/git_learning/">
+          <span>Git examples</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/git_usage/" class="dd-item">
+        <a href="/linux/git_usage/">
+          <span>Git usage</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/ssh_connect_to_virtualbox/" class="dd-item">
+        <a href="/linux/ssh_connect_to_virtualbox/">
+          <span>SSH connect to VirtualBox</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/ssh_connection_closed_by_remote/" class="dd-item">
+        <a href="/linux/ssh_connection_closed_by_remote/">
+          <span>SSH connection closed</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/git_submodule/" class="dd-item">
+        <a href="/linux/git_submodule/">
+          <span>Git submodule</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/webpage_001/" class="dd-item parent">
+      <a href="/webpage_001/">
+        <span>webpage 001</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/webpage_001/2015-01-30-using-ensembl-genomes-perl-api/" class="dd-item active">
+        <a href="/webpage_001/2015-01-30-using-ensembl-genomes-perl-api/">
+          <span>Using Ensembl Genomes Perl API</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-14-things-to-do-after-install-ubuntu-1404/" class="dd-item">
+        <a href="/webpage_001/2014-10-14-things-to-do-after-install-ubuntu-1404/">
+          <span>安装Ubuntu 14.04 之后需要做的几件事</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-03-26-small-rnas-in-bacteria/" class="dd-item">
+        <a href="/webpage_001/2015-03-26-small-rnas-in-bacteria/">
+          <span>EOB-001: Synthetic RNA silencing in bacteria</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-03-20-ggplot2parallel/" class="dd-item">
+        <a href="/webpage_001/2015-03-20-ggplot2parallel/">
+          <span>ggplot2 and parallel</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-04-13-manage-this-blog/" class="dd-item">
+        <a href="/webpage_001/2015-04-13-manage-this-blog/">
+          <span>Manage this blog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-04-11-ssh-login-without-password/" class="dd-item">
+        <a href="/webpage_001/2015-04-11-ssh-login-without-password/">
+          <span>SSh login without password [2 steps]</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-03-29-toehold-switches/" class="dd-item">
+        <a href="/webpage_001/2015-03-29-toehold-switches/">
+          <span>EOB-002: Toehold switches De-Novo-Designed Regulators of Gene Expression</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-01-23-hypergeometric-analysis--enrichment-analysis/" class="dd-item">
+        <a href="/webpage_001/2015-01-23-hypergeometric-analysis--enrichment-analysis/">
+          <span>超几何分析和GO富集分析</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-11-14-install-rna-seq-analysis-tools/" class="dd-item">
+        <a href="/webpage_001/2014-11-14-install-rna-seq-analysis-tools/">
+          <span>RNA-Seq分析工具的配置</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-31-edit-linux-path/" class="dd-item">
+        <a href="/webpage_001/2014-10-31-edit-linux-path/">
+          <span>编辑Linux的$PATH</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-29-rnaseq-analysis-using-r-and-bioconductor/" class="dd-item">
+        <a href="/webpage_001/2014-10-29-rnaseq-analysis-using-r-and-bioconductor/">
+          <span>使用R和Bioconductor进行RNASeq差异表达分析</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-19-github-markdown-syntax/" class="dd-item">
+        <a href="/webpage_001/2014-10-19-github-markdown-syntax/">
+          <span>Github Markdown常用语法</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-19-add-search-box-to-blog/" class="dd-item">
+        <a href="/webpage_001/2014-10-19-add-search-box-to-blog/">
+          <span>在Jekyll blog中添加搜索框</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-08-open-source-mirrors-in-china/" class="dd-item">
+        <a href="/webpage_001/2014-10-08-open-source-mirrors-in-china/">
+          <span>国内可选择的开源软件镜像源</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-04-download-files-with-python/" class="dd-item">
+        <a href="/webpage_001/2014-10-04-download-files-with-python/">
+          <span>通过Python批量下载文件</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-04-download-files-with-r/" class="dd-item">
+        <a href="/webpage_001/2014-10-04-download-files-with-r/">
+          <span>通过R语言下载文档</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-28-transform-genbank-to-fasta-using-biopython/" class="dd-item">
+        <a href="/webpage_001/2014-09-28-transform-genbank-to-fasta-using-biopython/">
+          <span>使用BioPython将GenBank转换为Fasta格式</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-23-mobaxterm-permissions-0660-for-id_rsa-are-too-open/" class="dd-item">
+        <a href="/webpage_001/2014-09-23-mobaxterm-permissions-0660-for-id_rsa-are-too-open/">
+          <span>MobaXterm: Permissions 0660 for &#39;id_rsa&#39; are too open</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-22-configuration-git-ssh/" class="dd-item">
+        <a href="/webpage_001/2014-09-22-configuration-git-ssh/">
+          <span>使用SSH管理Git</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-21-manage-multiple-account-on-github/" class="dd-item">
+        <a href="/webpage_001/2014-09-21-manage-multiple-account-on-github/">
+          <span>管理多个Github账号</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-20-jekyll&#43;github/" class="dd-item">
+        <a href="/webpage_001/2014-09-20-jekyll&#43;github/">
+          <span>jekyll&#43;Github</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-20-manage-github-pages/" class="dd-item">
+        <a href="/webpage_001/2014-09-20-manage-github-pages/">
+          <span>创建Github blogs</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-19-manage-blog-on-github/" class="dd-item">
+        <a href="/webpage_001/2014-09-19-manage-blog-on-github/">
+          <span>在Github上管理个人blog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-10-r-read-compressed-files/" class="dd-item">
+        <a href="/webpage_001/2014-09-10-r-read-compressed-files/">
+          <span>R语言读取压缩文档</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-08-27-questions-about-using-rcurl/" class="dd-item">
+        <a href="/webpage_001/2014-08-27-questions-about-using-rcurl/">
+          <span>RCurl的问题</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/license/" class="dd-item">
+      <a href="/license/">
+        <span><i class='fa fa-copyright' aria-hidden='true'></i>License</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+
+
+
+        <section id="shortcuts">
+                <li class="" role=""><h3>More</h3><a href="https://github.com/vjeantet/hugo-theme-docdock" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github repo</a></li>
+                <li class="" role=""><a href="http://genome.ucsc.edu/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> UCSC Genome Browser</a></li>
+        </section>
+            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+
+    <hr />
+    <li></li>
+    
+    </ul>
+
+ <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
+
+  <div id="top-bar">
+    
+      
+      
+      
+    <div id="top-github-link">
+      <a class="github-link" href="127.0.0.1webpage_001/2015-01-30-using-ensembl-genomes-perl-api.md" target="blank">
+        <i class="fa fa-code-fork"></i>
+        Edit page
+      </a>
+    </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+
+
+
+ <a href='/'>Bio M</a> > <a href='/webpage_001/'>webpage 001</a> > Using Ensembl Genomes Perl API
+
+ 
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#notes">Notes</a></li>
+<li><a href="#begin">Begin</a></li>
+<li><a href="#installing-the-api">Installing the API</a></li>
+<li><a href="#basic-usage">Basic usage</a></li>
+<li><a href="#advanced-usages">Advanced usages:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+
+  </div>
+
+
+  <div id="tags">
+    
+      <a class="label label-default" href="/tags/ensembl">Ensembl</a>
+    
+      <a class="label label-default" href="/tags/api">API</a>
+    
+  </div>
+
+<div id="body-inner">
+  
+    <h1>Using Ensembl Genomes Perl API</h1>
+  
+
+
+
+    
+    
+    
+    
+
+<p>Using EnsEMBL Genomes Perl API</p>
+
+<p>URL: [<a href="http://ensemblgenomes.org/info/access/eg_api](">http://ensemblgenomes.org/info/access/eg_api](</a>)</p>
+
+<p>Up to date: 2015-01-30, using Ensembl version v78.</p>
+
+<h3 id="notes">Notes</h3>
+
+<p>Before you read the following instructions, you are supposed to know about the <code>Ensembl Perl API</code>.  The follow 2 links are very helpful.</p>
+
+<ul>
+<li>Ensembl Perl API tutorials: <a href="http://asia.ensembl.org/info/docs/api/index.html">here</a></li>
+<li>Ensembl, Filmed API Workshop: <a href="http://www.ebi.ac.uk/training/online/course/ensembl-filmed-api-workshop">here</a><br /></li>
+</ul>
+
+<h3 id="begin">Begin</h3>
+
+<p>Things to know about Ensembl Genomes: (different from Ensembl Core)</p>
+
+<ul>
+<li>1. Load more than 250 genomes in a single database for bacteria.</li>
+</ul>
+
+<blockquote>
+<p>Whilst all Ensembl Genomes database can be accessed using the standard Ensembl API, the way that up to <code>250 genomes are loaded into a single database</code> presents some barriers to easy access for Ensembl Bacteria. To overcome this, a simple API, ensemblgenomes-api is provided to make accessing the data easier.<br />
+&ndash;Ensembl genomes</p>
+</blockquote>
+
+<ul>
+<li>2. Using different central object: <code>Bio::EnsEMBL::LookUp</code></li>
+</ul>
+
+<blockquote>
+<p>This provides an interface for loading the EnsEMBL Registry with the large numbers of genomes from multiple databases, and allows individual DBAdaptor objects to be retrieved for genomes that match criteria including ENA accession (or other seq_region name), Genome Assembly accession, species name and taxonomy ID.<br />
+Once Bio::EnsEMBL::DBAdaptor objects have been returned, they can be used as for any Ensembl species. Alternatively, the now-loaded Bio::EnsEMBL::Registry object can be accessed directly.<br />
+&ndash;Ensembl genomes</p>
+</blockquote>
+
+<h3 id="installing-the-api">Installing the API</h3>
+
+<blockquote>
+<p>First, the standard Ensembl API and its dependencies should be installed as described <a href="http://www.ensembl.org/info/docs/api/api_installation.html">here</a>. This should be the same version of Ensembl that is used by Ensembl Bacteria.</p>
+
+<p>Secondly, the <code>ensemblgenomes-api</code> API should be installed from the <a href="http://github.com/EnsemblGenomes/ensemblgenomes-api">GitHub repository</a>. You will need to add the modules directory from this package to your PERL5LIB. You may also need to install the CPAN package JSON - please consult your local systems adminstration if you are unsure about how to do this.<br />
+&ndash;Ensembl genomes</p>
+</blockquote>
+
+<h3 id="basic-usage">Basic usage</h3>
+
+<blockquote>
+<p>The default mode for using the API is to use a specialised lookup database on the public Ensembl Genomes server. The usage of this is shown below, but note that there is a pregenerated snippet of code for each DBAdaptor on the species description page in the genome browser. Note that full PerlDoc is available from the API or <a href="http://ensemblgenomes.github.io/ensemblgenomes-api/annotated.html">here</a>
+&ndash;Ensembl genomes</p>
+</blockquote>
+
+<p>Example 1: Retrieve gene/&hellip; informations</p>
+
+<pre><code class="language-perl">use strict;
+use warnings;
+
+use Bio::EnsEMBL::LookUp;
+my $lookup = Bio::EnsEMBL::LookUp-&gt;new();
+
+# Getting DBAdaptors
+# 1. by name
+$dba = $lookup-&gt;get_by_name_exact('escherichia_coli_str_k_12_substr_mg1655');
+$dba = $lookup-&gt;get_all_by_name_pattern('escherichia_coli_str_k_12_*');
+
+# 2. by taxonomy
+$dba = $lookup-&gt;get_all_by_taxon_id(388919); # 
+$dba = $lookup-&gt;get_all_by_taxon_branch(561); # branch id
+
+# 3. by genomic INSDC accession
+$dba = $lookup-&gt;get_all_by_accession('U00096');
+
+# 4. by genome assembly accession
+$dba = $lookup-&gt;get_by_assembly_accession('GCA_000005845.2') # E. coli
+
+</code></pre>
+
+<p>supportting material:</p>
+
+<pre><code># E. coli K-12 MG1655
+Organism name: Escherichia coli str. K-12 substr. MG1655
+Infraspecific name: Strain: K-12 substr. MG1655
+BioSample: SAMN02604091
+Submitter: Univ. Wisconsin
+Date: 2013/09/26
+Assembly level: Complete Genome
+Genome representation: full
+RefSeq category: reference genome
+GenBank assembly accession: GCA_000005845.2 (latest)
+RefSeq assembly accession: GCF_000005845.2 (latest)
+RefSeq assembly and GenBank assembly identical: yes
+IDs: 79781 [UID] 854978 [GenBank] 854998 [RefSeq]
+
+Molecule name    GenBank sequence        RefSeq sequence
+Chromosome    U00096.3    =    NC_000913.3
+</code></pre>
+
+<h3 id="advanced-usages">Advanced usages:</h3>
+
+<p>The ensemblgenomes-api API can be used in conjunction with the Compara Perl API to access gene family data for Bacteria. We can also use Registry to get the family data.
+(see the script 1)</p>
+
+<pre><code>* 1. Retrieve which family a gene belonging to?  
+* 2. Retrieve genes belonging to a family.  
+* 3. Retrieve genes belonging to a family, within a specific specie.  
+* 4. Retrieve canonical peptides from a family.    
+</code></pre>
+
+<ul>
+<li>1. Retrieve which famil a genen belonging to? (Two ways to get geneAdaptors of specific gene.)</li>
+</ul>
+
+<p>see <a href="https://raw.githubusercontent.com/bakerwm/RNASeq-dataanalysis/master/ensembl_genomes/eg_ex2_1_retrieve_family_of_genes.pl">script on github</a> and the <a href="https://raw.githubusercontent.com/bakerwm/RNASeq-dataanalysis/master/ensembl_genomes/ex2_1.out">output</a>.</p>
+
+<pre><code class="language-perl">use strict;
+use warnings;
+
+use Bio::EnsEMBL::Registry;
+use Bio::EnsEMBL::LookUp;
+use Bio::EnsEMBL::Compara::DBSQL::DBAdaptor;
+
+use Data::Dumper;
+
+# Retrieve the family of a given gene
+
+#my $nom = 'mycobacterium_tuberculosis_h37rv_gca_000195955_2';
+#my $input_gene = 'Rv2925c'; # RNase III
+my $nom = 'escherichia_coli_str_k_12_substr_mg1655';
+my $input_gene = 'b0344';
+
+my $lookup = Bio::EnsEMBL::LookUp-&gt;new();
+
+# load gene adaptor
+my $dba = $lookup-&gt;get_by_name_exact($nom);
+
+my $gene_adaptor = $dba-&gt;get_GeneAdaptor();
+
+my $gene = $gene_adaptor-&gt;fetch_by_stable_id($input_gene); # lacZ
+
+# OPTIONS 1, Bio::EnsEMBL::Registry
+# load Registry
+my $registry = 'Bio::EnsEMBL::Registry';
+$registry-&gt;load_registry_from_db(
+        -host =&gt; 'mysql-eg-publicsql.ebi.ac.uk',
+        -port =&gt; '4157',
+        -user =&gt; 'anonymous'
+        );
+
+my $member_adaptor = $registry-&gt;get_adaptor('bacteria', 'compara', 'GeneMember');
+
+my $family_adaptor = $registry-&gt;get_adaptor('bacteria', 'compara', 'Family');
+
+my $member = $member_adaptor-&gt;fetch_by_stable_id($input_gene);
+
+my $families = $family_adaptor-&gt;fetch_all_by_GeneMember($member);
+
+# OPTIONS 2, Compara
+## load compara adaptor
+#my $compara_dba = Bio::EnsEMBL::Compara::DBSQL::DBAdaptor-&gt;new(
+#        -host =&gt; 'mysql-eg-publicsql.ebi.ac.uk',
+#        -port =&gt; '4157',
+#        -user =&gt; 'anonymous',
+#        -dbname =&gt; 'ensembl_compara_bacteria_25_78'
+#        );
+#
+#my $member = $compara_dba-&gt;get_GeneMemberAdaptor()-&gt;fetch_by_stable_id($input_gene);
+
+#my $families = $compara_dba-&gt;get_FamilyAdaptor()-&gt;fetch_all_by_GeneMember($member);
+
+# loop out
+print &quot;Retrieve the family of input gene: &quot;, $input_gene, &quot;\n&quot;, &quot;From genome: &quot;, $nom, &quot;\n\n&quot;;
+print &quot;Family&quot;, &quot;\t&quot;, &quot;Family_description&quot;, &quot;\n&quot;;
+
+foreach my $family (@{$families}){
+    # this family
+    print $family-&gt;stable_id(), &quot;\t&quot;, $family-&gt;description(), &quot;\n&quot;;
+}
+
+</code></pre>
+
+<ul>
+<li>2. Retrieve genes belonging to a family</li>
+</ul>
+
+<p>see <a href="https://raw.githubusercontent.com/bakerwm/RNASeq-dataanalysis/master/ensembl_genomes/eg_ex2_2_retrieve_genes_belonging_to_a_family.pl">script on github</a> and the <a href="https://raw.githubusercontent.com/bakerwm/RNASeq-dataanalysis/master/ensembl_genomes/ex2_2.out">output</a>.</p>
+
+<pre><code class="language-perl">use strict;
+use warnings;
+
+#use Bio::EnsEMBL::Registry;
+use Bio::EnsEMBL::LookUp;
+use Bio::EnsEMBL::Compara::DBSQL::DBAdaptor;
+
+use Data::Dumper;
+
+my $input_family = 'MF_00395'; #
+
+# Retrieve genes from a given family
+my $lookup = Bio::EnsEMBL::LookUp-&gt;new();
+
+# load compara adaptor
+my $compara_dba = Bio::EnsEMBL::Compara::DBSQL::DBAdaptor-&gt;new(
+        -host =&gt; 'mysql-eg-publicsql.ebi.ac.uk',
+        -port =&gt; '4157',
+        -user =&gt; 'anonymous',
+        -dbname =&gt; 'ensembl_compara_bacteria_25_78'
+        );
+
+my $family = $compara_dba-&gt;get_FamilyAdaptor()-&gt;fetch_by_stable_id($input_family);
+
+# output
+print &quot;Retrieve genes from a given family\n&quot;;
+print &quot;Input family: &quot;, $family-&gt;stable_id(), &quot; &quot;, $family-&gt;description(), &quot;\n\n&quot;;
+
+print &quot;Output:\n&quot;, &quot;Gene&quot;, &quot;\t&quot;, &quot;GeneName&quot;, &quot;\t&quot;, &quot;Species&quot;, &quot;\n&quot;;
+# find members in the family
+my $members = $family-&gt;get_all_Members();
+foreach my $member (@{$members}){
+    my $genome_db = $member-&gt;genome_db();
+
+    # member dba
+    my $member_dba = $lookup-&gt;get_by_name_exact($genome_db-&gt;name());
+    if(defined $member_dba){
+        my $gene_adaptor = $member_dba-&gt;get_GeneAdaptor();
+        my $gene = $gene_adaptor-&gt;fetch_by_stable_id($member-&gt;gene_member()-&gt;stable_id());
+        my $gene_external_name  = (defined $gene-&gt;external_name())?$gene-&gt;external_name():&quot;-&quot;;
+        print $gene-&gt;stable_id(), &quot;\t&quot;, $gene_external_name, &quot;\t&quot;, $member_dba-&gt;species(), &quot;\n&quot;;
+        $member_dba-&gt;dbc()-&gt;disconnect_if_idle();
+    }
+}
+
+</code></pre>
+
+<ul>
+<li>3. Retrieve genes belonging to a family, within a specific specie</li>
+</ul>
+
+<p>see <a href="https://raw.githubusercontent.com/bakerwm/RNASeq-dataanalysis/master/ensembl_genomes/eg_ex2_3_retrieve_genes_belonging_to_a_family_of_species.pl">script on github</a> and the <a href="https://raw.githubusercontent.com/bakerwm/RNASeq-dataanalysis/master/ensembl_genomes/ex2_3.out">output</a>.</p>
+
+<pre><code class="language-perl">use strict;
+use warnings;
+
+#use Bio::EnsEMBL::Registry;
+use Bio::EnsEMBL::LookUp;
+use Bio::EnsEMBL::Compara::DBSQL::DBAdaptor;
+
+use Data::Dumper;
+
+my $input_family = 'MF_00395';
+my $taxid = 1219; #Prochlorococcus marinus
+
+# find all genomes that descendants of a specified node (as a filter)
+my $lookup = Bio::EnsEMBL::LookUp-&gt;new();
+
+my $branches = $lookup-&gt;get_all_by_taxon_branch($taxid);
+my %target_species = map {$_-&gt;species() =&gt; $_ } @{$branches};
+
+# load compara adaptors
+my $compara_dba = Bio::EnsEMBL::Compara::DBSQL::DBAdaptor-&gt;new(
+        -host =&gt; 'mysql-eg-publicsql.ebi.ac.uk',
+        -port =&gt; '4157',
+        -user =&gt; 'anonymous',
+        -dbname =&gt; 'ensembl_compara_bacteria_25_78'        
+        );
+my $family = $compara_dba-&gt;get_FamilyAdaptor()-&gt;fetch_by_stable_id($input_family);
+
+print &quot;Retrieve genes from a given family, of specific genomes\n&quot;;
+print &quot;Input family: &quot;, $family-&gt;stable_id(), &quot;\t&quot;, $family-&gt;description(), &quot;\n&quot;;
+
+# find members in this family
+print &quot;Find members of taxid 1219 in this family\n\n&quot;;
+print &quot;GeneID&quot;, &quot;\t&quot;, &quot;Species&quot;, &quot;\n&quot;;
+my $members = $family-&gt;get_all_Members();
+foreach my $member (@{$members}){
+    my $genome_db = $member-&gt;genome_db();
+     
+    # filter by taxon from the list
+    my $member_dba = $target_species{$genome_db-&gt;name()};
+    if(defined $member_dba){
+        my $gene_adaptor = $member_dba-&gt;get_GeneAdaptor();
+        my $gene = $gene_adaptor-&gt;fetch_by_stable_id($member-&gt;gene_member()-&gt;stable_id());
+        my $gene_external_name  = (defined $gene-&gt;external_name())?$gene-&gt;external_name():&quot;-&quot;;
+        print $gene-&gt;stable_id(), &quot;\t&quot;, $gene_external_name, &quot;\t&quot;, $member_dba-&gt;species(), &quot;\n&quot;;
+        $member_dba-&gt;dbc()-&gt;disconnect_if_idle();
+    }
+}
+
+</code></pre>
+
+<ul>
+<li>4. Retrieve canonical peptides from a family</li>
+</ul>
+
+<p>see <a href="https://raw.githubusercontent.com/bakerwm/RNASeq-dataanalysis/master/ensembl_genomes/eg_ex2_4_retrieve_canonical_peptides_from_genes_of_a_family.pl">script on github</a>, and the <a href="https://raw.githubusercontent.com/bakerwm/RNASeq-dataanalysis/master/ensembl_genomes/ex2_4.out">output</a>.</p>
+
+<pre><code class="language-perl">use strict;
+use warnings;
+
+#use Bio::EnsEMBL::Registry;
+use Bio::EnsEMBL::LookUp;
+use Bio::SeqIO;
+
+use Data::Dumper;
+
+# Retrieve the canonical peptides from genes belonging to a given family
+
+# Input data
+my $input_family = 'MF_00395';
+
+# lookup
+my $lookup = Bio::EnsEMBL::LookUp-&gt;new();
+
+# load compara 
+my $compara_dba = Bio::EnsEMBL::Compara::DBSQL::DBAdaptor-&gt;new(
+        -host =&gt; 'mysql-eg-publicsql.ebi.ac.uk',
+        -port =&gt; '4157',
+        -user =&gt; 'anonymous',
+        -dbname =&gt; 'ensembl_compara_bacteria_25_78'
+        );
+
+my $family = $compara_dba-&gt;get_FamilyAdaptor()-&gt;fetch_by_stable_id($input_family);
+
+my $outfile = &quot;&gt;&quot;. $family-&gt;stable_id. &quot;.fa&quot;;
+my $seq_out = Bio::SeqIO-&gt;new(-file =&gt; $outfile,
+                              -format =&gt; &quot;fasta&quot;
+                              );
+
+print &quot;Write family: &quot;, $family-&gt;stable_id(), &quot; to $outfile\n&quot;;
+
+# loop over members
+my $members = $family-&gt;get_all_Members();
+foreach my $member (@{$members}){
+    my $genome_db = $member-&gt;genome_db();
+    my $member_dba = $lookup-&gt;get_by_name_exact($genome_db-&gt;name());
+    if(defined $member_dba){
+        my $gene = $member_dba-&gt;get_GeneAdaptor()-&gt;fetch_by_stable_id($member-&gt;gene_member()-&gt;stable_id() );
+        print &quot;Write sequence of &quot;, $member-&gt;stable_id(), &quot;\n&quot;;
+        my $s = $gene-&gt;canonical_transcript()-&gt;translate();
+        $seq_out-&gt;write_seq($s);
+        $member_dba-&gt;dbc()-&gt;disconnect_if_idle();
+    }
+
+}
+</code></pre>
+
+
+    
+    
+          <footer class=" footline" >
+	
+	    <i class='fa fa-user'></i> <a href="mailto:wangm08@hotmail.com">Ming Wang</a>  <i class='fa fa-calendar'></i> 24/04/2017
+	    </div>
+	
+</footer>
+  </div>
+</div>
+
+<div id="navigation">
+</div>
+
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
+
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/docdock.js"></script>
+<script src="/theme-original/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

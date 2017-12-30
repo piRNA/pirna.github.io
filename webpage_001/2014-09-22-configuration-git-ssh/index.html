@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bio M</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.31.1" />
+
+<title>使用SSH管理Git :: Bio M</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/hybrid.css" rel="stylesheet">
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<link href="/css/auto-complete.css" rel="stylesheet">
+<link href="/theme-original/style.css" rel="stylesheet">
+
+  <link href="/theme-original/variant-blue.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+<meta name="description" content="">
+
+
+    
+  </head>
+  <body data-url="/webpage_001/2014-09-22-configuration-git-ssh/">
+    
+      <div id="headermain"></div>
+<nav id="sidebar" class="showVisitedLinks">
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	
+  
+    <p><strong>Bio M</strong></p>
+
+  
+
+    </div>
+        <div class="searchbox">
+		    <label for="search-by"><i class="fa fa-search"></i></label>
+		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <span data-search-clear=""><i class="fa fa-close"></i></span>
+		</div>
+		<script type="text/javascript" src="/js/lunr.min.js"></script>
+		<script type="text/javascript" src="/js/auto-complete.js"></script>
+		<script type="text/javascript">
+        
+            var baseurl = "\/";
+        
+		</script>
+		<script type="text/javascript" src="/js/search.js"></script>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="/biology/" class="dd-item">
+      <a href="/biology/">
+        <span>Biology</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/linux/" class="dd-item">
+      <a href="/linux/">
+        <span>Linux</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/linux/virtualbox_network/" class="dd-item">
+        <a href="/linux/virtualbox_network/">
+          <span>VirtualBox network</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/git_learning/" class="dd-item">
+        <a href="/linux/git_learning/">
+          <span>Git examples</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/git_usage/" class="dd-item">
+        <a href="/linux/git_usage/">
+          <span>Git usage</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/ssh_connect_to_virtualbox/" class="dd-item">
+        <a href="/linux/ssh_connect_to_virtualbox/">
+          <span>SSH connect to VirtualBox</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/ssh_connection_closed_by_remote/" class="dd-item">
+        <a href="/linux/ssh_connection_closed_by_remote/">
+          <span>SSH connection closed</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/git_submodule/" class="dd-item">
+        <a href="/linux/git_submodule/">
+          <span>Git submodule</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/webpage_001/" class="dd-item parent">
+      <a href="/webpage_001/">
+        <span>webpage 001</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/webpage_001/2015-01-30-using-ensembl-genomes-perl-api/" class="dd-item">
+        <a href="/webpage_001/2015-01-30-using-ensembl-genomes-perl-api/">
+          <span>Using Ensembl Genomes Perl API</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-14-things-to-do-after-install-ubuntu-1404/" class="dd-item">
+        <a href="/webpage_001/2014-10-14-things-to-do-after-install-ubuntu-1404/">
+          <span>安装Ubuntu 14.04 之后需要做的几件事</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-03-26-small-rnas-in-bacteria/" class="dd-item">
+        <a href="/webpage_001/2015-03-26-small-rnas-in-bacteria/">
+          <span>EOB-001: Synthetic RNA silencing in bacteria</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-03-20-ggplot2parallel/" class="dd-item">
+        <a href="/webpage_001/2015-03-20-ggplot2parallel/">
+          <span>ggplot2 and parallel</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-04-13-manage-this-blog/" class="dd-item">
+        <a href="/webpage_001/2015-04-13-manage-this-blog/">
+          <span>Manage this blog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-04-11-ssh-login-without-password/" class="dd-item">
+        <a href="/webpage_001/2015-04-11-ssh-login-without-password/">
+          <span>SSh login without password [2 steps]</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-03-29-toehold-switches/" class="dd-item">
+        <a href="/webpage_001/2015-03-29-toehold-switches/">
+          <span>EOB-002: Toehold switches De-Novo-Designed Regulators of Gene Expression</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-01-23-hypergeometric-analysis--enrichment-analysis/" class="dd-item">
+        <a href="/webpage_001/2015-01-23-hypergeometric-analysis--enrichment-analysis/">
+          <span>超几何分析和GO富集分析</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-11-14-install-rna-seq-analysis-tools/" class="dd-item">
+        <a href="/webpage_001/2014-11-14-install-rna-seq-analysis-tools/">
+          <span>RNA-Seq分析工具的配置</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-31-edit-linux-path/" class="dd-item">
+        <a href="/webpage_001/2014-10-31-edit-linux-path/">
+          <span>编辑Linux的$PATH</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-29-rnaseq-analysis-using-r-and-bioconductor/" class="dd-item">
+        <a href="/webpage_001/2014-10-29-rnaseq-analysis-using-r-and-bioconductor/">
+          <span>使用R和Bioconductor进行RNASeq差异表达分析</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-19-github-markdown-syntax/" class="dd-item">
+        <a href="/webpage_001/2014-10-19-github-markdown-syntax/">
+          <span>Github Markdown常用语法</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-19-add-search-box-to-blog/" class="dd-item">
+        <a href="/webpage_001/2014-10-19-add-search-box-to-blog/">
+          <span>在Jekyll blog中添加搜索框</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-08-open-source-mirrors-in-china/" class="dd-item">
+        <a href="/webpage_001/2014-10-08-open-source-mirrors-in-china/">
+          <span>国内可选择的开源软件镜像源</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-04-download-files-with-python/" class="dd-item">
+        <a href="/webpage_001/2014-10-04-download-files-with-python/">
+          <span>通过Python批量下载文件</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-04-download-files-with-r/" class="dd-item">
+        <a href="/webpage_001/2014-10-04-download-files-with-r/">
+          <span>通过R语言下载文档</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-28-transform-genbank-to-fasta-using-biopython/" class="dd-item">
+        <a href="/webpage_001/2014-09-28-transform-genbank-to-fasta-using-biopython/">
+          <span>使用BioPython将GenBank转换为Fasta格式</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-23-mobaxterm-permissions-0660-for-id_rsa-are-too-open/" class="dd-item">
+        <a href="/webpage_001/2014-09-23-mobaxterm-permissions-0660-for-id_rsa-are-too-open/">
+          <span>MobaXterm: Permissions 0660 for &#39;id_rsa&#39; are too open</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-22-configuration-git-ssh/" class="dd-item active">
+        <a href="/webpage_001/2014-09-22-configuration-git-ssh/">
+          <span>使用SSH管理Git</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-21-manage-multiple-account-on-github/" class="dd-item">
+        <a href="/webpage_001/2014-09-21-manage-multiple-account-on-github/">
+          <span>管理多个Github账号</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-20-jekyll&#43;github/" class="dd-item">
+        <a href="/webpage_001/2014-09-20-jekyll&#43;github/">
+          <span>jekyll&#43;Github</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-20-manage-github-pages/" class="dd-item">
+        <a href="/webpage_001/2014-09-20-manage-github-pages/">
+          <span>创建Github blogs</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-19-manage-blog-on-github/" class="dd-item">
+        <a href="/webpage_001/2014-09-19-manage-blog-on-github/">
+          <span>在Github上管理个人blog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-10-r-read-compressed-files/" class="dd-item">
+        <a href="/webpage_001/2014-09-10-r-read-compressed-files/">
+          <span>R语言读取压缩文档</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-08-27-questions-about-using-rcurl/" class="dd-item">
+        <a href="/webpage_001/2014-08-27-questions-about-using-rcurl/">
+          <span>RCurl的问题</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/license/" class="dd-item">
+      <a href="/license/">
+        <span><i class='fa fa-copyright' aria-hidden='true'></i>License</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+
+
+
+        <section id="shortcuts">
+                <li class="" role=""><h3>More</h3><a href="https://github.com/vjeantet/hugo-theme-docdock" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github repo</a></li>
+                <li class="" role=""><a href="http://genome.ucsc.edu/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> UCSC Genome Browser</a></li>
+        </section>
+            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+
+    <hr />
+    <li></li>
+    
+    </ul>
+
+ <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
+
+  <div id="top-bar">
+    
+      
+      
+      
+    <div id="top-github-link">
+      <a class="github-link" href="127.0.0.1webpage_001/2014-09-22-configuration-git-ssh.md" target="blank">
+        <i class="fa fa-code-fork"></i>
+        Edit page
+      </a>
+    </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+
+
+
+ <a href='/'>Bio M</a> > <a href='/webpage_001/'>webpage 001</a> > 使用SSH管理Git
+
+ 
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#how-to-use-git-bash">How to use Git Bash?</a>
+<ul>
+<li><a href="#options-1-upload-local-files-to-github-web-repo">Options 1: Upload local files to Github web repo</a></li>
+<li><a href="#options-2-clone-a-web-repo-to-local-pc">Options 2: Clone a Web repo to local PC</a></li>
+<li><a href="#options-3-update-my-local-files">Options 3: Update my local files</a></li>
+<li><a href="#options-4-git-pull">Options 4: git pull</a></li>
+</ul></li>
+<li><a href="#create-simple-gitpages">Create simple Gitpages</a></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+
+  </div>
+
+
+  <div id="tags">
+    
+      <a class="label label-default" href="/tags/ssh">SSH</a>
+    
+  </div>
+
+<div id="body-inner">
+  
+    <h1>使用SSH管理Git</h1>
+  
+
+
+
+    
+    
+    
+    
+
+<p>Start Github and using Git SSH</p>
+
+<ol>
+<li>Create a Github account</li>
+
+<li><p>Go to <a href="https://github.com/">Github</a> and create your account.</p></li>
+
+<li><p>Download Git bash tool</p></li>
+
+<li><p>Download <strong>Git bash</strong> for windows on <a href="http://git-scm.com/downloads">Git-scm</a>.</p></li>
+
+<li><p>Install the <em>Git-1.9.4-preview20140611.exe</em> using default settings.</p></li>
+
+<li><p>Configure the SSH connection with remote github</p></li>
+
+<li><p>Start the Git Bash and create SSH keys</p></li>
+</ol>
+
+<pre><code>ssh-keygen  -t rsa  -C  &quot;wangmcas@gmail.com&quot;
+</code></pre>
+
+<ul>
+<li>Create privite and public keys for the Email account<br /></li>
+<li>Record the file <strong>id_rsa.pub</strong> in direcotry <strong>.ssh</strong></li>
+</ul>
+
+<ol>
+<li>Setting the Github website<br /></li>
+<li>Account Settings -&gt; SSH keys -&gt; Add SSH key<br /></li>
+
+<li><p>Paste the content of <strong>id_rsa.pub</strong> to the window.</p></li>
+
+<li><p>Setting the local git</p></li>
+
+<li><p>Run the following command lines</p></li>
+</ol>
+
+<pre><code>git config --global user.email &quot;wangmcas@gmail.com&quot;  
+git config --global user.name  &quot;bakerwm&quot;  
+</code></pre>
+
+<ol>
+<li>Test your SSH connection to github<br /></li>
+</ol>
+
+<pre><code>ssh -T git@github.com
+</code></pre>
+
+<h2 id="how-to-use-git-bash">How to use Git Bash?</h2>
+
+<h3 id="options-1-upload-local-files-to-github-web-repo">Options 1: Upload local files to Github web repo</h3>
+
+<ul>
+<li><p>Create an empty repo on Github website: [eg: <em>test-temp</em>]</p></li>
+
+<li><p>Initiate the git bash</p></li>
+</ul>
+
+<pre><code>git init  
+\\ Move your files to the current directory  
+git add  &lt;your files&gt;  
+  git commit -m 'Initial my project'  
+  git remote add origin git@github.com:bakerwm/test-temp.git  
+  git push -u origin master    
+</code></pre>
+
+<h3 id="options-2-clone-a-web-repo-to-local-pc">Options 2: Clone a Web repo to local PC</h3>
+
+<ul>
+<li>Record the name of web repo: [eg: <em>hello</em>]<br /></li>
+<li>Clone the web repo to local PC and update your files<br /></li>
+</ul>
+
+<pre><code>git clone  git@github.com:bakerwm/hello.git  
+#Create local files  
+git add &lt;local files&gt;   
+git commit -m 'add new files'  
+git push  
+</code></pre>
+
+<h3 id="options-3-update-my-local-files">Options 3: Update my local files</h3>
+
+<ul>
+<li>cd to your directory<br /></li>
+<li>update your files to web repo<br /></li>
+</ul>
+
+<pre><code>git add &lt;your files&gt;  
+git commit -m 'update files'  
+git push origin master  
+</code></pre>
+
+<h3 id="options-4-git-pull">Options 4: git pull</h3>
+
+<p>Just try the following command:</p>
+
+<pre><code>git pull
+</code></pre>
+
+<h2 id="create-simple-gitpages">Create simple Gitpages</h2>
+
+<ol>
+<li>Create a repo in your github website: &ldquo;3Kings4Food&rdquo;</li>
+<li>Clone the repo to your local PC</li>
+<li>Create a special Github Pages branch</li>
+</ol>
+
+<pre><code>git checkout --orphan  gh-pages
+</code></pre>
+
+<p>It will create a new branch, and saying <strong>Switched to a new branch &lsquo;gh-pages&rsquo;</strong></p>
+
+<pre><code>git checkout gh-pages
+</code></pre>
+
+<p>It will check whether you are in the branch &ldquo;gh-pages&rdquo;</p>
+
+<ol>
+<li>push your files to the new branch for the first time<br /></li>
+</ol>
+
+<pre><code>git add files  
+git commit -m 'update my files'  
+git push  --set-upstream origin gh-pages  
+</code></pre>
+
+<ol>
+<li>You can view your page at: <a href="http://bakerwm.github.io/3Kings4Food">http://bakerwm.github.io/3Kings4Food</a><br />
+Use <strong>HTTP</strong> to access the website, <strong>NOT</strong> <em>HPPTS</em>.<br /></li>
+</ol>
+
+<p>Some useful guides for creating Gitpages:<br />
+* 1. <a href="http://www.thinkful.com/learn/a-guide-to-using-github-pages/">http://www.thinkful.com/learn/a-guide-to-using-github-pages/</a><br />
+* 2. <a href="http://24ways.org/2013/get-started-with-github-pages/">http://24ways.org/2013/get-started-with-github-pages/</a></p>
+
+
+    
+    
+          <footer class=" footline" >
+	
+	    <i class='fa fa-user'></i> <a href="mailto:wangm08@hotmail.com">Ming Wang</a>  <i class='fa fa-calendar'></i> 22/09/2014
+	    </div>
+	
+</footer>
+  </div>
+</div>
+
+<div id="navigation">
+</div>
+
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
+
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/docdock.js"></script>
+<script src="/theme-original/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

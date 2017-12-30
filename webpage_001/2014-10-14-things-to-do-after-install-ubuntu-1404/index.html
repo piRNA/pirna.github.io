@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bio M</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.31.1" />
+
+<title>安装Ubuntu 14.04 之后需要做的几件事 :: Bio M</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/hybrid.css" rel="stylesheet">
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<link href="/css/auto-complete.css" rel="stylesheet">
+<link href="/theme-original/style.css" rel="stylesheet">
+
+  <link href="/theme-original/variant-blue.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+<meta name="description" content="">
+
+
+    
+  </head>
+  <body data-url="/webpage_001/2014-10-14-things-to-do-after-install-ubuntu-1404/">
+    
+      <div id="headermain"></div>
+<nav id="sidebar" class="showVisitedLinks">
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	
+  
+    <p><strong>Bio M</strong></p>
+
+  
+
+    </div>
+        <div class="searchbox">
+		    <label for="search-by"><i class="fa fa-search"></i></label>
+		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <span data-search-clear=""><i class="fa fa-close"></i></span>
+		</div>
+		<script type="text/javascript" src="/js/lunr.min.js"></script>
+		<script type="text/javascript" src="/js/auto-complete.js"></script>
+		<script type="text/javascript">
+        
+            var baseurl = "\/";
+        
+		</script>
+		<script type="text/javascript" src="/js/search.js"></script>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="/biology/" class="dd-item">
+      <a href="/biology/">
+        <span>Biology</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/linux/" class="dd-item">
+      <a href="/linux/">
+        <span>Linux</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/linux/virtualbox_network/" class="dd-item">
+        <a href="/linux/virtualbox_network/">
+          <span>VirtualBox network</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/git_learning/" class="dd-item">
+        <a href="/linux/git_learning/">
+          <span>Git examples</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/git_usage/" class="dd-item">
+        <a href="/linux/git_usage/">
+          <span>Git usage</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/ssh_connect_to_virtualbox/" class="dd-item">
+        <a href="/linux/ssh_connect_to_virtualbox/">
+          <span>SSH connect to VirtualBox</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/ssh_connection_closed_by_remote/" class="dd-item">
+        <a href="/linux/ssh_connection_closed_by_remote/">
+          <span>SSH connection closed</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/linux/git_submodule/" class="dd-item">
+        <a href="/linux/git_submodule/">
+          <span>Git submodule</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/webpage_001/" class="dd-item parent">
+      <a href="/webpage_001/">
+        <span>webpage 001</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/webpage_001/2015-01-30-using-ensembl-genomes-perl-api/" class="dd-item">
+        <a href="/webpage_001/2015-01-30-using-ensembl-genomes-perl-api/">
+          <span>Using Ensembl Genomes Perl API</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-14-things-to-do-after-install-ubuntu-1404/" class="dd-item active">
+        <a href="/webpage_001/2014-10-14-things-to-do-after-install-ubuntu-1404/">
+          <span>安装Ubuntu 14.04 之后需要做的几件事</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-03-26-small-rnas-in-bacteria/" class="dd-item">
+        <a href="/webpage_001/2015-03-26-small-rnas-in-bacteria/">
+          <span>EOB-001: Synthetic RNA silencing in bacteria</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-03-20-ggplot2parallel/" class="dd-item">
+        <a href="/webpage_001/2015-03-20-ggplot2parallel/">
+          <span>ggplot2 and parallel</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-04-13-manage-this-blog/" class="dd-item">
+        <a href="/webpage_001/2015-04-13-manage-this-blog/">
+          <span>Manage this blog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-04-11-ssh-login-without-password/" class="dd-item">
+        <a href="/webpage_001/2015-04-11-ssh-login-without-password/">
+          <span>SSh login without password [2 steps]</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-03-29-toehold-switches/" class="dd-item">
+        <a href="/webpage_001/2015-03-29-toehold-switches/">
+          <span>EOB-002: Toehold switches De-Novo-Designed Regulators of Gene Expression</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2015-01-23-hypergeometric-analysis--enrichment-analysis/" class="dd-item">
+        <a href="/webpage_001/2015-01-23-hypergeometric-analysis--enrichment-analysis/">
+          <span>超几何分析和GO富集分析</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-11-14-install-rna-seq-analysis-tools/" class="dd-item">
+        <a href="/webpage_001/2014-11-14-install-rna-seq-analysis-tools/">
+          <span>RNA-Seq分析工具的配置</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-31-edit-linux-path/" class="dd-item">
+        <a href="/webpage_001/2014-10-31-edit-linux-path/">
+          <span>编辑Linux的$PATH</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-29-rnaseq-analysis-using-r-and-bioconductor/" class="dd-item">
+        <a href="/webpage_001/2014-10-29-rnaseq-analysis-using-r-and-bioconductor/">
+          <span>使用R和Bioconductor进行RNASeq差异表达分析</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-19-github-markdown-syntax/" class="dd-item">
+        <a href="/webpage_001/2014-10-19-github-markdown-syntax/">
+          <span>Github Markdown常用语法</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-19-add-search-box-to-blog/" class="dd-item">
+        <a href="/webpage_001/2014-10-19-add-search-box-to-blog/">
+          <span>在Jekyll blog中添加搜索框</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-08-open-source-mirrors-in-china/" class="dd-item">
+        <a href="/webpage_001/2014-10-08-open-source-mirrors-in-china/">
+          <span>国内可选择的开源软件镜像源</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-04-download-files-with-python/" class="dd-item">
+        <a href="/webpage_001/2014-10-04-download-files-with-python/">
+          <span>通过Python批量下载文件</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-10-04-download-files-with-r/" class="dd-item">
+        <a href="/webpage_001/2014-10-04-download-files-with-r/">
+          <span>通过R语言下载文档</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-28-transform-genbank-to-fasta-using-biopython/" class="dd-item">
+        <a href="/webpage_001/2014-09-28-transform-genbank-to-fasta-using-biopython/">
+          <span>使用BioPython将GenBank转换为Fasta格式</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-23-mobaxterm-permissions-0660-for-id_rsa-are-too-open/" class="dd-item">
+        <a href="/webpage_001/2014-09-23-mobaxterm-permissions-0660-for-id_rsa-are-too-open/">
+          <span>MobaXterm: Permissions 0660 for &#39;id_rsa&#39; are too open</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-22-configuration-git-ssh/" class="dd-item">
+        <a href="/webpage_001/2014-09-22-configuration-git-ssh/">
+          <span>使用SSH管理Git</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-21-manage-multiple-account-on-github/" class="dd-item">
+        <a href="/webpage_001/2014-09-21-manage-multiple-account-on-github/">
+          <span>管理多个Github账号</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-20-jekyll&#43;github/" class="dd-item">
+        <a href="/webpage_001/2014-09-20-jekyll&#43;github/">
+          <span>jekyll&#43;Github</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-20-manage-github-pages/" class="dd-item">
+        <a href="/webpage_001/2014-09-20-manage-github-pages/">
+          <span>创建Github blogs</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-19-manage-blog-on-github/" class="dd-item">
+        <a href="/webpage_001/2014-09-19-manage-blog-on-github/">
+          <span>在Github上管理个人blog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-09-10-r-read-compressed-files/" class="dd-item">
+        <a href="/webpage_001/2014-09-10-r-read-compressed-files/">
+          <span>R语言读取压缩文档</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/webpage_001/2014-08-27-questions-about-using-rcurl/" class="dd-item">
+        <a href="/webpage_001/2014-08-27-questions-about-using-rcurl/">
+          <span>RCurl的问题</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/license/" class="dd-item">
+      <a href="/license/">
+        <span><i class='fa fa-copyright' aria-hidden='true'></i>License</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+
+
+
+        <section id="shortcuts">
+                <li class="" role=""><h3>More</h3><a href="https://github.com/vjeantet/hugo-theme-docdock" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github repo</a></li>
+                <li class="" role=""><a href="http://genome.ucsc.edu/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> UCSC Genome Browser</a></li>
+        </section>
+            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+
+    <hr />
+    <li></li>
+    
+    </ul>
+
+ <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
+
+  <div id="top-bar">
+    
+      
+      
+      
+    <div id="top-github-link">
+      <a class="github-link" href="127.0.0.1webpage_001/2014-10-14-things-to-do-after-install-ubuntu-1404.md" target="blank">
+        <i class="fa fa-code-fork"></i>
+        Edit page
+      </a>
+    </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+
+
+
+ <a href='/'>Bio M</a> > <a href='/webpage_001/'>webpage 001</a> > 安装Ubuntu 14.04 之后需要做的几件事
+
+ 
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#1-更改软件更新源">1. 更改软件更新源：</a></li>
+<li><a href="#2-安装软件">2. 安装软件：</a></li>
+<li><a href="#3-系统美化">3. 系统美化</a></li>
+<li><a href="#4-安装-adobe-flash-player">4. 安装 Adobe Flash Player</a></li>
+<li><a href="#5-安装jekyll-git">5. 安装Jekyll &amp; git</a></li>
+</ul></li>
+<li><a href="#6-安装bioinfo-tools">6. 安装Bioinfo-tools</a>
+<ul>
+<li><a href="#7-q-a">7. Q&amp;A</a></li>
+<li><a href="#8-修改ubuntu-windows-双系统启动顺序">8. 修改Ubuntu &amp; Windows 双系统启动顺序</a></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+
+  </div>
+
+
+  <div id="tags">
+    
+      <a class="label label-default" href="/tags/ubuntu">ubuntu</a>
+    
+  </div>
+
+<div id="body-inner">
+  
+    <h1>安装Ubuntu 14.04 之后需要做的几件事</h1>
+  
+
+
+
+    
+    
+    
+    
+
+<p>使用中文界面的Ubuntu，需要做一些调整，更方便使用。主要包括系统优化、软件安装。</p>
+
+<h2 id="1-更改软件更新源">1. 更改软件更新源：</h2>
+
+<p>在系统设置 -&gt; Ubuntu 软件 -&gt; 下载自，调整镜像为 http:// mirrors.163.com</p>
+
+<h2 id="2-安装软件">2. 安装软件：</h2>
+
+<ul>
+<li>1) 新立得件管理包：在<code>Ubuntu软件中心</code>搜索 新立得 即可。<br /></li>
+<li>2) Chromium: 在<code>Ubuntu软件中心</code>搜索并安装 chromium<br /></li>
+<li>3) 搜狗拼音for Linux：前往<a href="http://pinyin.sogou.com/linux/">pinyin.sogou.com/linux/</a> 下载搜狗输入法for Linux, Ubuntu 14.04可直接双击deb包安装。<br /></li>
+<li>4) WPS office for Linux: 前往<a href="http://community.wps.cn/download/">community.wps.cn/download</a>下载最新版 deb 包，双击安装即可<br /></li>
+<li>5) VLC媒体播放器</li>
+</ul>
+
+<h2 id="3-系统美化">3. 系统美化</h2>
+
+<ul>
+<li>1. 更改中文字体<br />
+安装文泉驿黑字体<br /></li>
+</ul>
+
+<pre><code>sudo apt-get install ttf-wqy-microhei
+</code></pre>
+
+<ul>
+<li>2. 删除原默认字体 ukai, uming<br /></li>
+</ul>
+
+<pre><code>sudo apt-get remove fonts-arphic-ukai fonts-arphic-uming 
+</code></pre>
+
+<ul>
+<li>3. 主题美化工具<br />
+在<code>Ubuntu软件中心</code>安装美化工具 <code>Unity Tweak Tool</code><br />
+或者前往 <a href="http://ubuntu-twewak.com/">http://ubuntu-twewak.com/</a> 下载 <code>Ubuntu Tweak</code>的deb包，双击安装即可。<br /></li>
+</ul>
+
+<h2 id="4-安装-adobe-flash-player">4. 安装 Adobe Flash Player</h2>
+
+<ul>
+<li>1. 安装Adobe Flash Player (pepper flash player)</li>
+</ul>
+
+<pre><code>sudo apt-get update
+sudo apt-get install chromium-browser
+sudo apt-get install pepperflashplugin-nonfree
+sudo update-pepperflashplugin-nonfree --install
+</code></pre>
+
+<ul>
+<li>2. 软件中心搜索adobe flash player安装即可</li>
+</ul>
+
+<h2 id="5-安装jekyll-git">5. 安装Jekyll &amp; git</h2>
+
+<p>Jekyll 2 was recently released and can be installed on Ubuntu 14.04 using <code>apt-get</code> and <code>gem install</code>. Additional features such as Rdiscount can be added with the same meth od. Although there are packages for Jekyll in the Ubuntu repository, the packages are for older versions of Jekyll.
+See the reference:<a href="http://michaelchelen.net/81fa/install-jekyll-2-ubuntu-14-04/">Install Jekyll 2 on Ubuntu 14.04</a></p>
+
+<ul>
+<li>1. Insall Prerequisites<br />
+Install ruby, the ruby development libraries, and the make command.</li>
+</ul>
+
+<pre><code>sudo apt-get install ruby ruby-dev make
+</code></pre>
+
+<ul>
+<li>2. Install Jekyll<br />
+Install the Jekyll gem system wide. To include all documentation, omit the <code>--no-rdoc  --no-ri</code> switches.</li>
+</ul>
+
+<pre><code>sudo gem install jekyll --no-rdoc  --no-ri
+</code></pre>
+
+<ul>
+<li>3. ExecJS Workaround<br />
+Install <strong>nodejs</strong> to work around this issue</li>
+</ul>
+
+<pre><code>sudo apt-get install nodejs
+</code></pre>
+
+<ul>
+<li>4. Start Jekyll<br />
+Check that Jekyll has been successfully installed.<br /></li>
+</ul>
+
+<pre><code>jekyll -v
+</code></pre>
+
+<ul>
+<li>5. Recommended<br />
+Install other required packages.<br /></li>
+</ul>
+
+<pre><code>- Install git
+sudo apt-get install git
+
+- Install Rdiscount Markdown renderer
+sudo gem install rdiscount  --no-rdoc --no-ri
+
+- Install Redcarpet Markdown renderer
+sudo gem install redcarpet  --no-rdoc --no-ri
+
+- Install 汉字to拼音 
+sudo gem install hz2py --no-rdoc --no-ri
+</code></pre>
+
+<ul>
+<li>Check you site locally<br />
+Start the website website HTML and start a local server.</li>
+</ul>
+
+<pre><code>jekyll serve
+</code></pre>
+
+<h1 id="6-安装bioinfo-tools">6. 安装Bioinfo-tools</h1>
+
+<ul>
+<li>1. R 3.1.1 for ubuntu 14.04<br /></li>
+</ul>
+
+<pre><code>sudo add-apt-repository ppa:marutter/rrutter
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install r-base r-base-dev
+</code></pre>
+
+<ul>
+<li>2. Rstudio for ubuntu 14.04<br /></li>
+</ul>
+
+<p>前往 <a href="http://www.rstudio.com/products/rstudio/download/">http://www.rstudio.com/products/rstudio/download/</a> 下载相应版本的 deb 包，双击安装。</p>
+
+<ul>
+<li>3. Bioconductor<br /></li>
+</ul>
+
+<pre><code>source(&quot;http://bioconductor.org/biocLite.R&quot;)
+biocLite()
+biocLite(&quot;DEG&quot;) # install package
+</code></pre>
+
+<p>Check which package is available on the website of <a href="http://bioconductor.org">Bioconductor</a>.</p>
+
+<ul>
+<li>4. Biopython<br /></li>
+</ul>
+
+<p>Need to install the dependencies and biopython:</p>
+
+<ul>
+<li>a. Install Biopython dependencies</li>
+</ul>
+
+<pre><code># Numerical Python (NumPy)
+sudo apt-get install python-numpy python-scipy
+# Check 
+python
+</code></pre>
+
+<pre><code class="language-python">&gt;&gt;&gt; import numpy
+</code></pre>
+
+<ul>
+<li>b. Install ReportLab
+<br /></li>
+</ul>
+
+<p>The ReportLab package is a library for generating PDF documents.</p>
+
+<pre><code>sudo pip install rlextra 
+-i https://wangm08@yeah.net:gongpeng!110@www.reportlab.com/pypi/
+# For an automated install, the command line must split over separate lines.
+</code></pre>
+
+<pre><code class="language-python"># Check
+&gt;&gt;&gt; from reportlab.graphics import renderPDF
+</code></pre>
+
+<ul>
+<li>c. Install Biopython
+<br /></li>
+</ul>
+
+<p>Download biopython distribution: <a href="http://biopython.org/wiki/Download">http://biopython.org/wiki/Download</a>.</p>
+
+<pre><code># Unpack the file with 
+tar -xzvpf biopython-**.tar.gz
+# Then change to the biopython* directory, and then install biopython 
+sudo python setup.py install
+</code></pre>
+
+<ul>
+<li>d. Check whether everything is worked
+<br /></li>
+</ul>
+
+<p>Option 1:</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; from Bio.Seq import Seq
+&gt;&gt;&gt; from Bio.Alphabet.IUPAC import unambiguous_dna
+&gt;&gt;&gt; seq = Seq('GATCAGAAG', unambiguous_dna)
+&gt;&gt;&gt; seq[0:2]
+&gt;&gt;&gt; seq.translate()
+</code></pre>
+
+<p>Option 2:</p>
+
+<pre><code>python setup.py test
+</code></pre>
+
+<ul>
+<li><p>5 Install third-party tools from Synaptic</p>
+
+<ul>
+<li>a. NCBI Standalone BLAST<br /></li>
+<li>b. clustalo, libargtable,<br /></li>
+<li>c. EMBOSS,<br /></li>
+</ul></li>
+
+<li><p>6 Install samtools</p></li>
+
+<li><p>7 install bedtools</p></li>
+</ul>
+
+<p><code>sudo apt-get install bedtools</code></p>
+
+<h2 id="7-q-a">7. Q&amp;A</h2>
+
+<p>============================
+1. Unable to access Windows partitions</p>
+
+<ul>
+<li>Error messages:</li>
+</ul>
+
+<pre><code>Unable to access “OS”
+Error mounting /dev/sda1 at /media/ming/OS: Command-line `mount -t &quot;ntfs&quot; -o &quot;uhelper=udisks2,nodev,nosuid,uid=1000,gid=1000&quot; &quot;/dev/sda1&quot; &quot;/media/ming/OS&quot;' exited with non-zero exit status 14: Windows is hibernated, refused to mount.
+Failed to mount '/dev/sda1': Operation not permitted
+The NTFS partition is in an unsafe state. Please resume and shutdown
+Windows fully (no hibernation or fast restarting), or mount the volume
+read-only with the 'ro' mount option.
+</code></pre>
+
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+
+<p>Run the following commands in your terminal:</p>
+
+<pre><code>sudo ntfsfix /dev/sd**NN**/
+</code></pre>
+
+<p>the <strong>NN</strong> is the partition you want to mount, (in my examples, it is sda1)</p>
+
+<p>[Warnnings: I do not know whether this solution will crash your windows.]</p>
+
+<h2 id="8-修改ubuntu-windows-双系统启动顺序">8. 修改Ubuntu &amp; Windows 双系统启动顺序</h2>
+
+<p>在Windows 8.1 系统上安装的 Ubuntu 15.04, 安装后默认的首选启动是： &ldquo;Ubuntu&rdquo;</p>
+
+<pre><code>×Ubuntu  
+  Advanced options for Ubuntu 
+  Memory test (memtest86+)  
+  Memory test (memtest86+, serial console 11520)
+  Windows 8 (loader) (on /dev/sda1)  
+</code></pre>
+
+<p>Ubuntu 15.04 using GRUB2 to manage the boot order.</p>
+
+<p>Two ways to modify the boot order:</p>
+
+<ul>
+<li>1 . recommended:</li>
+</ul>
+
+<pre><code>$ sudo mv /etc/grub.d/30_os-prober /etc/grub.d/08-os-prober
+</code></pre>
+
+<p>The above command is changing the name of <code>30_os-prober</code> to <code>08_os-prober</code> (06-09 is ok). The filename relate to Ubuntu boot are begin with &ldquo;10<em>&rdquo;, so &ldquo;08</em>&rdquo; is prior to the Ubuntu. At last, we have to update the grub by <code>sudo update-grub</code></p>
+
+<p>The output:</p>
+
+<pre><code>$ sudo update-grub
+[sudo] password for ming: 
+Generating grub configuration file ...
+Found Windows 8 (loader) on /dev/sda1
+Found linux image: /boot/vmlinuz-3.19.0-10-generic
+Found initrd image: /boot/initrd.img-3.19.0-10-generic
+Found memtest86+ image: /memtest86+.elf
+Found memtest86+ image: /memtest86+.bin
+done
+</code></pre>
+
+<p>Done, it turns out that <code>Windows 8</code> is on the top.</p>
+
+<ul>
+<li>2 . alternative way</li>
+</ul>
+
+<p>Open the file <code>/etc/default/grub</code> and change the value of <code>GRUB_DEFAULT=</code> from <code>0</code> to <code>4</code> ( the 5th is windows, ubuntu begin with 0&rdquo;.</p>
+
+<pre><code>$ sudo vim /etc/default/grub
+</code></pre>
+
+<pre><code># If you change this file, run 'update-grub' afterwards to update
+# /boot/grub/grub.cfg.
+# For full documentation of the options in this file, see:
+#   info -f grub -n 'Simple configuration'
+ 
+GRUB_DEFAULT=0  # change it to 4
+#GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=10
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2&gt; /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash&quot;
+GRUB_CMDLINE_LINUX=&quot;&quot;
+
+...
+
+</code></pre>
+
+<p>Need to update the grub.</p>
+
+<pre><code>$ sudo update-grub
+</code></pre>
+
+<p>Done!</p>
+
+<p>Reboot and you will find the default boot option is <code>Windows 8</code>.</p>
+
+
+    
+    
+          <footer class=" footline" >
+	
+	    <i class='fa fa-user'></i> <a href="mailto:wangm08@hotmail.com">Ming Wang</a>  <i class='fa fa-calendar'></i> 24/04/2017
+	    </div>
+	
+</footer>
+  </div>
+</div>
+
+<div id="navigation">
+</div>
+
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
+
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/docdock.js"></script>
+<script src="/theme-original/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
